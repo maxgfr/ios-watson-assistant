@@ -7,9 +7,8 @@
 //
 
 import UIKit
-import MFMessageComposeViewController
 
-class ViewController: MFMessageComposeViewController {
+class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

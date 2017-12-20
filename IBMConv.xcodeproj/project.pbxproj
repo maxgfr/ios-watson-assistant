@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1E05C1BC5E3E5DC692DFFC7F /* Pods_IBMConv.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C2FC355FD28401DBE8AC40 /* Pods_IBMConv.framework */; };
 		5CBECA7E5A90904B6574D677 /* Pods_IBMConvUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 054E9C090A395E4EC2E2435C /* Pods_IBMConvUITests.framework */; };
 		6E670A373E1415AE18E5FC59 /* Pods_IBMConvTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BA0F9F467BCC2007F385D23 /* Pods_IBMConvTests.framework */; };
 		A5E14A9A1FEA72B20097EE42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E14A991FEA72B20097EE42 /* AppDelegate.swift */; };
@@ -68,7 +67,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E05C1BC5E3E5DC692DFFC7F /* Pods_IBMConv.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
