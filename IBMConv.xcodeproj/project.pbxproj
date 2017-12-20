@@ -14,6 +14,7 @@
 		A5E14AA41FEA72B20097EE42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5E14AA21FEA72B20097EE42 /* LaunchScreen.storyboard */; };
 		A5E14AAF1FEA72B20097EE42 /* IBMConvTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E14AAE1FEA72B20097EE42 /* IBMConvTests.swift */; };
 		A5E14ABA1FEA72B20097EE42 /* IBMConvUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E14AB91FEA72B20097EE42 /* IBMConvUITests.swift */; };
+		A5E14ACA1FEA77A90097EE42 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E14AC91FEA77A90097EE42 /* Credentials.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		A5E14AB51FEA72B20097EE42 /* IBMConvUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IBMConvUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5E14AB91FEA72B20097EE42 /* IBMConvUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBMConvUITests.swift; sourceTree = "<group>"; };
 		A5E14ABB1FEA72B30097EE42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5E14AC91FEA77A90097EE42 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				A5E14AA01FEA72B20097EE42 /* Assets.xcassets */,
 				A5E14AA21FEA72B20097EE42 /* LaunchScreen.storyboard */,
 				A5E14AA51FEA72B20097EE42 /* Info.plist */,
+				A5E14AC91FEA77A90097EE42 /* Credentials.swift */,
 			);
 			path = IBMConv;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5E14ACA1FEA77A90097EE42 /* Credentials.swift in Sources */,
 				A5E14A9C1FEA72B20097EE42 /* ViewController.swift in Sources */,
 				A5E14A9A1FEA72B20097EE42 /* AppDelegate.swift in Sources */,
 			);
