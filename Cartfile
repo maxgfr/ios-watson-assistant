@@ -1,1 +1,2 @@
 github "watson-developer-cloud/swift-sdk"
+github "MessageKit/MessageKit"
