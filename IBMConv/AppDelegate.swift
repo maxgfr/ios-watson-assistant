@@ -7,13 +7,46 @@
 //
 
 import UIKit
+import ConversationV1
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    var conversation: Conversation!
 
-
+    /// Instantiate the Watson services
+    func setupWatsonServices() {
+        conversation = Conversation(
+            username: Credentials.ConversationUsername,
+            password: Credentials.ConversationPassword,
+            version: "2017-05-26"
+        )
+    }
+    
+    /// Present an error message
+    func failure(error: Error) {
+        let alert = UIAlertController(
+            title: "Watson Error",
+            message: error.localizedDescription,
+            preferredStyle: .alert
+        )
+        alert.addAction(UIAlertAction(title: "Ok", style: .default))
+        DispatchQueue.main.async {
+            self.present(alert, animated: true)
+        }
+    }
+    
+    /// Start a new conversation
+    func startConversation() {
+        conversation.message(
+            workspaceID: workspace,
+            failure: failure,
+            success: presentResponse
+        )
+    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true
