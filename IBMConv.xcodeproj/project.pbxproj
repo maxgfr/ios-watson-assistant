@@ -10,6 +10,8 @@
 		339B78FB4611191102816589 /* Pods_IBMConvUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 636EA6D2F782253648BFB1E1 /* Pods_IBMConvUITests.framework */; };
 		3FF9EAC989360718A2EBF248 /* Pods_IBMConvTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30D7AF593E8D3B6D9148739A /* Pods_IBMConvTests.framework */; };
 		68E8443460225529C24D0987 /* Pods_IBMConv.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 535C66EFABB65155F967CDE2 /* Pods_IBMConv.framework */; };
+		A5315A1C1FEC071F00294C79 /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5315A1B1FEC071F00294C79 /* Eureka.framework */; };
+		A5315A1E1FEC073000294C79 /* Eureka.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5315A1B1FEC071F00294C79 /* Eureka.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A591F4781FEC039300A3338B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A591F4771FEC039300A3338B /* AppDelegate.swift */; };
 		A591F47A1FEC039300A3338B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A591F4791FEC039300A3338B /* ViewController.swift */; };
 		A591F47D1FEC039300A3338B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A591F47B1FEC039300A3338B /* Main.storyboard */; };
@@ -36,6 +38,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		A5315A1D1FEC072600294C79 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A5315A1E1FEC073000294C79 /* Eureka.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		04D1E92C35D83E30FE5AC567 /* Pods-IBMConvUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IBMConvUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IBMConvUITests/Pods-IBMConvUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		30D7AF593E8D3B6D9148739A /* Pods_IBMConvTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IBMConvTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +59,7 @@
 		636EA6D2F782253648BFB1E1 /* Pods_IBMConvUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IBMConvUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		74B09F3C8B524DFC41C0C748 /* Pods-IBMConv.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IBMConv.release.xcconfig"; path = "Pods/Target Support Files/Pods-IBMConv/Pods-IBMConv.release.xcconfig"; sourceTree = "<group>"; };
 		85752B19A3D79D1582B046A9 /* Pods-IBMConv.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IBMConv.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IBMConv/Pods-IBMConv.debug.xcconfig"; sourceTree = "<group>"; };
+		A5315A1B1FEC071F00294C79 /* Eureka.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Eureka.framework; path = Carthage/Build/iOS/Eureka.framework; sourceTree = "<group>"; };
 		A591F4741FEC039300A3338B /* IBMConv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IBMConv.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A591F4771FEC039300A3338B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A591F4791FEC039300A3338B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5315A1C1FEC071F00294C79 /* Eureka.framework in Frameworks */,
 				68E8443460225529C24D0987 /* Pods_IBMConv.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -92,6 +109,7 @@
 		1D91FA8A5FC7769A60172E16 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A5315A1B1FEC071F00294C79 /* Eureka.framework */,
 				535C66EFABB65155F967CDE2 /* Pods_IBMConv.framework */,
 				30D7AF593E8D3B6D9148739A /* Pods_IBMConvTests.framework */,
 				636EA6D2F782253648BFB1E1 /* Pods_IBMConvUITests.framework */,
@@ -178,6 +196,7 @@
 				A591F4721FEC039300A3338B /* Resources */,
 				4A724653E8C579FB104756F6 /* [CP] Embed Pods Frameworks */,
 				66E7C82D1657F68FEA84F04E /* [CP] Copy Pods Resources */,
+				A5315A1D1FEC072600294C79 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -624,6 +643,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = IBMConv/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = maxime.golfier.IBMConv;
@@ -639,6 +662,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = IBMConv/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = maxime.golfier.IBMConv;
