@@ -1,6 +1,0 @@
-framework module Pods_IBMConvTests {
-  umbrella header "Pods-IBMConvTests-umbrella.h"
-
-  export *
-  module * { export * }
-}
