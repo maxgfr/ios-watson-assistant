@@ -7,25 +7,25 @@
 //
 
 import UIKit
-import SwiftyButton
 
-class ViewController: UIViewController {
-
+class HomeViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let button = PressableButton()
-        button.colors = .init(button: .cyan, shadow: .blue)
-        button.shadowHeight = 5
-        button.cornerRadius = 5
         // Do any additional setup after loading the view, typically from a nib.
+        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func viewDidAppear(_ animated: Bool){
+        self.performSegue(withIdentifier: "loginView", sender: self);
+    }
 
-
+    
+    
+    
 }
-
-

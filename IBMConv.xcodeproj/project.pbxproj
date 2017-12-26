@@ -16,12 +16,13 @@
 		A5315A251FEC11EA00294C79 /* SwiftyButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5315A241FEC11E900294C79 /* SwiftyButton.framework */; };
 		A5315A261FEC11F700294C79 /* SwiftyButton.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5315A241FEC11E900294C79 /* SwiftyButton.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A591F4781FEC039300A3338B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A591F4771FEC039300A3338B /* AppDelegate.swift */; };
-		A591F47A1FEC039300A3338B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A591F4791FEC039300A3338B /* ViewController.swift */; };
+		A591F47A1FEC039300A3338B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A591F4791FEC039300A3338B /* HomeViewController.swift */; };
 		A591F47D1FEC039300A3338B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A591F47B1FEC039300A3338B /* Main.storyboard */; };
 		A591F47F1FEC039300A3338B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A591F47E1FEC039300A3338B /* Assets.xcassets */; };
 		A591F4821FEC039300A3338B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A591F4801FEC039300A3338B /* LaunchScreen.storyboard */; };
 		A591F48D1FEC039300A3338B /* IBMConvTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A591F48C1FEC039300A3338B /* IBMConvTests.swift */; };
 		A591F4981FEC039300A3338B /* IBMConvUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A591F4971FEC039300A3338B /* IBMConvUITests.swift */; };
+		A5A737E31FF1230D00D584AB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A737E21FF1230D00D584AB /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,7 +69,7 @@
 		A5315A241FEC11E900294C79 /* SwiftyButton.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyButton.framework; path = Carthage/Build/iOS/SwiftyButton.framework; sourceTree = "<group>"; };
 		A591F4741FEC039300A3338B /* IBMConv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IBMConv.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A591F4771FEC039300A3338B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A591F4791FEC039300A3338B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A591F4791FEC039300A3338B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A591F47C1FEC039300A3338B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A591F47E1FEC039300A3338B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A591F4811FEC039300A3338B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -79,6 +80,7 @@
 		A591F4931FEC039300A3338B /* IBMConvUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IBMConvUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A591F4971FEC039300A3338B /* IBMConvUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBMConvUITests.swift; sourceTree = "<group>"; };
 		A591F4991FEC039300A3338B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5A737E21FF1230D00D584AB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A8AB87FFC4B4ED0035FA8231 /* Pods-IBMConvTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IBMConvTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IBMConvTests/Pods-IBMConvTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EC0B442ACFB4769268B572A0 /* Pods-IBMConvUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IBMConvUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IBMConvUITests/Pods-IBMConvUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -141,8 +143,9 @@
 		A5315A1F1FEC0B0300294C79 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				A591F4791FEC039300A3338B /* ViewController.swift */,
+				A591F4791FEC039300A3338B /* HomeViewController.swift */,
 				A5315A221FEC0B6F00294C79 /* RegisterViewController.swift */,
+				A5A737E21FF1230D00D584AB /* LoginViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				TargetAttributes = {
 					A591F4731FEC039300A3338B = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					A591F4871FEC039300A3338B = {
@@ -412,9 +416,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-IBMConv/Pods-IBMConv-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftCloudant/SwiftCloudant.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftCloudant.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -491,7 +498,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A591F47A1FEC039300A3338B /* ViewController.swift in Sources */,
+				A5A737E31FF1230D00D584AB /* LoginViewController.swift in Sources */,
+				A591F47A1FEC039300A3338B /* HomeViewController.swift in Sources */,
 				A591F4781FEC039300A3338B /* AppDelegate.swift in Sources */,
 				A5315A231FEC0B6F00294C79 /* RegisterViewController.swift in Sources */,
 			);
@@ -669,7 +677,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = maxime.golfier.IBMConv;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -688,7 +697,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = maxime.golfier.IBMConv;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

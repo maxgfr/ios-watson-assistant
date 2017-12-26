@@ -1,0 +1,6 @@
+framework module SwiftCloudant {
+  umbrella header "SwiftCloudant-umbrella.h"
+
+  export *
+  module * { export * }
+}

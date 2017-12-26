@@ -6,7 +6,7 @@ target 'IBMConv' do
   use_frameworks!
 
   # Pods for IBMConv
-
+  pod 'SwiftCloudant', :git => 'https://github.com/cloudant/swift-cloudant.git'  
   target 'IBMConvTests' do
     inherit! :search_paths
     # Pods for testing

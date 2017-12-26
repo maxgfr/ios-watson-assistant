@@ -7,46 +7,62 @@
 //
 
 import UIKit
-import Eureka
+import SwiftCloudant
 
-class RegisterViewController: FormViewController {
+class RegisterViewController: UIViewController {
+    
+    @IBOutlet weak var identifiantTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var repeatTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var rulesMail = RuleSet<String>()
-        rulesMail.add(rule: RuleRequired())
-        rulesMail.add(rule: RuleEmail())
         
-        var rulesNormal = RuleSet<String>()
-        rulesNormal.add(rule: RuleRequired())
+        // Do any additional setup after loading the view.
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func registerButton(_ sender: Any) {
+        let userEmail = identifiantTextField.text;
+        let userPassword = passwordTextField.text;
+        let userRepeatPassword = repeatTextField.text;
         
-        form +++ Section("Informations personnelles")
-            <<< TextRow(){ row in
-                row.title = "Non"
-                row.placeholder = "Entrer votre nom ici"
-                row.add(ruleSet: rulesNormal)
-                row.validationOptions = .validatesOnChangeAfterBlurred
-            }
-            <<< TextRow(){ row in
-                row.title = "Prénom"
-                row.placeholder = "Entrer votre prénom ici"
-                row.add(ruleSet: rulesNormal)
-                row.validationOptions = .validatesOnChangeAfterBlurred
-            }
-            <<< EmailRow(){ row in
-                row.title = "E-mail"
-                row.placeholder = "Entrer votre e-mail ici"
-                row.add(ruleSet: rulesMail)
-                row.validationOptions = .validatesOnChangeAfterBlurred
-            }
-            <<< PasswordRow(){ row in
-                row.title = "Mot de passe"
-                row.placeholder = "Entrer votre mot de passe ici"
-                row.add(ruleSet: rulesNormal)
-                row.validationOptions = .validatesOnChangeAfterBlurred
+        // Check for empty fields
+        if((userEmail?.isEmpty)! || (userPassword?.isEmpty)! || (userRepeatPassword?.isEmpty)!){
+            // Display alert message
+            displayMyAlertMessage(userMessage: "All fields are required")
+            return
         }
         
+        //Check if passwords match
+        if(userPassword != userRepeatPassword){
+            // Display an alert message
+            displayMyAlertMessage(userMessage: "Passwords do not match");
+            return;
+        }
+        
+        //displayMyAlertMessage(userMessage: "coucou")
+        return
     }
+    func displayMyAlertMessage(userMessage:String)
+    {
+        
+        let myAlert = UIAlertController(title:"Alert", message:userMessage, preferredStyle: UIAlertControllerStyle.alert);
+        
+        let okAction = UIAlertAction(title:"Ok", style:UIAlertActionStyle.default, handler:nil);
+        
+        myAlert.addAction(okAction);
+        
+        self.present(myAlert, animated:true, completion:nil);
+        
+    }
+    
+    
+    
 }
 
 

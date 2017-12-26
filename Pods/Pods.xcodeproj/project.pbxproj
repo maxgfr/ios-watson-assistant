@@ -3,73 +3,151 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05742C5DC11A2FEA9A95588F2F9ED0C2 /* RequestExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA5741C8D5F49485EBAD07B850D073D /* RequestExecutor.swift */; };
+		06F91D899035D1F90F00D33D54F4CDF8 /* GetDocumentOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B09F7D2EFD164BF62AE05F807AABD8 /* GetDocumentOperation.swift */; };
+		1929A340E414AA328A8B94F8F4767D74 /* Pods-IBMConv-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B46576ACD1B6C1D891A3E2707855FD2 /* Pods-IBMConv-dummy.m */; };
+		1B8DD6A26E58089D53026A34891F8373 /* URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E4CBC5B3F67AC0E031D0A894CF8024 /* URLSession.swift */; };
+		1F879B43F28A4E77AE1AE5C52C4E0AED /* ReadAttachmentOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C200592117FE34899B18A5C0645192E /* ReadAttachmentOperation.swift */; };
+		25F87EEE8A1557D3701B375BDC0C7DF3 /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1A667F2548C9AC74544ED4186C6FD5 /* Operation.swift */; };
 		290DB2DCDFE8A9BCF060331FF03A8CF4 /* Pods-IBMConvTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B9AC7BD7B62FA04C235820A9AA7C323A /* Pods-IBMConvTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2DB7884EEEC82DA939F9E0C33E1A0BEF /* ViewLikeOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E118FDA91A65FCFE6683B0520A3C1D2C /* ViewLikeOperation.swift */; };
+		40396A60695777F2AB904B2FC251F3EE /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D51F118A149E75D0A2BA2D683389452 /* RequestBuilder.swift */; };
+		41BDAAD7C14D22357F929CABA1A748AD /* SwiftCloudant-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E2B0DC1C7A676BB7899D579D1D78333 /* SwiftCloudant-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		52D748B57C3799938D85E95FFF8FBD2B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		5962E6737D39F4E027DB781E69D56743 /* Pods-IBMConv-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B46576ACD1B6C1D891A3E2707855FD2 /* Pods-IBMConv-dummy.m */; };
-		6CD4F0B4D185206AA46DEAADAFD85ED9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		61F932F5377F42FF0DC25E9ACBF74E96 /* DeleteDatabaseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4893F6F172E06229F28A003E6BE3AB /* DeleteDatabaseOperation.swift */; };
+		6A500A0C6836F5344B2AFF9319AD4EF8 /* BulkDocs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F2CB6B4C2335DF15407CE07A478176 /* BulkDocs.swift */; };
 		6E1FD4F2C64BF742B6752E1804F0400E /* Pods-IBMConvTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 274A0979305882163C4FCD08C36B7468 /* Pods-IBMConvTests-dummy.m */; };
+		7A2219CBC2292E0CE39961142693567B /* OperationProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E17B31397FDB2614CC3F3E06EF1CF5 /* OperationProtocols.swift */; };
 		8615C58822288BEBF8EF40CE321814B9 /* Pods-IBMConvUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AB571CD3ED47EDC0F44AE425A18354F6 /* Pods-IBMConvUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F2B9BDA27752EE1639B2290921A976B6 /* Pods-IBMConv-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8474D22DA8A9C638892EF5F89356F3FB /* Pods-IBMConv-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9A38AD1463F35AB65AB063788880B74F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		9CD5D5B546D028A16B95226AE58BBECC /* PutAttachmentOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7538933DE80D89C377C1E65628214130 /* PutAttachmentOperation.swift */; };
+		BB9E7262A4726B73919A4DE40D82CBD3 /* CouchClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38F913E116F6E0F0C9F4790194C0504 /* CouchClient.swift */; };
+		BF8DB6CF31128C80B8160F34F406D5EC /* Pods-IBMConv-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8474D22DA8A9C638892EF5F89356F3FB /* Pods-IBMConv-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C2002441DA7F05F3756D5B41E8FFE814 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		C6D66A43A85B36357679A783741957CC /* GetAllDatabasesOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52C9FA7C57BCC406AB7607F60ADF31C /* GetAllDatabasesOperation.swift */; };
+		C89D5BB76E8C35133E8E8C6B418D1A1D /* QueryViewOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81582D0C857A312DED851B1137164D2 /* QueryViewOperation.swift */; };
+		CEAF41C67D7D15727D76DC02C4F304BF /* DeleteDocumentOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A3514FA32EAA188EC7E75F095CE17B /* DeleteDocumentOperation.swift */; };
+		D1A90C8480D5679FBC5759FEAC1D05B1 /* SwiftCloudant-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B9FE19011B68316A7780F96719EA184 /* SwiftCloudant-dummy.m */; };
+		D4AD965B06068C2C854BF771F85AEA08 /* PutDocumentOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40159F8E28BC3219E00D53E4007B9EC2 /* PutDocumentOperation.swift */; };
+		E0ABFCAC9A1C8DEA038497A25AC6ACC5 /* DeleteAttachmentOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9801435923D2340EFF0AF55300E616C9 /* DeleteAttachmentOperation.swift */; };
+		E68BA7658EF5FE4C466198753B15BD43 /* GetChangesOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE14DEDC5B06F46A4C07E729C849585 /* GetChangesOperation.swift */; };
+		E75E7ADCC3F717A751E36BD4C7C30CC9 /* CouchDatabaseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1547CE2D60B8661D94FA7A088FAF785 /* CouchDatabaseOperation.swift */; };
+		E82C2B33D842EA50CB3E109A53C536CF /* ViewPaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8672F6363AC1B6B434733E5AA44FAA63 /* ViewPaging.swift */; };
+		EA6F97ECA06166FB5938531FA5973059 /* GetAllDocsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B9734F6CC8BE62D10871C66FDC8CFB /* GetAllDocsOperation.swift */; };
+		EE3F9D52A6224E308DCBE0828F96FC98 /* DeleteQueryIndexOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39EDA82D0F883BA8EAF0D2F56E0F100 /* DeleteQueryIndexOperation.swift */; };
+		F02493B1BDBABDFA921C95D73D679164 /* FindDocumentsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A64F38B137D20852235DDFB94FC67F /* FindDocumentsOperation.swift */; };
 		F7AC9A2ADE461E8E6CBB22E1E325191A /* Pods-IBMConvUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAAEE7C8F1B7EFFD15B43B4C47F560F /* Pods-IBMConvUITests-dummy.m */; };
 		FDBA37C0920B02E23941435EBD9ECFEE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		FE71EC70450D72B11F7271DEC59AB393 /* CreateQueryIndexOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE28AB29467C1428A5422B470D55D23 /* CreateQueryIndexOperation.swift */; };
+		FFFC747C82A90C0820A54C3DA2FB02B9 /* CreateDatabaseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B31864CDB3D55EA53586AC3F9E3E91 /* CreateDatabaseOperation.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		8EC2A79A6FBBD89422B3C71009A8976D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9ADB9A61642953DFD37E7EB73AB856CC;
+			remoteInfo = SwiftCloudant;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		01E4CBC5B3F67AC0E031D0A894CF8024 /* URLSession.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = URLSession.swift; path = Source/SwiftCloudant/HTTP/URLSession.swift; sourceTree = "<group>"; };
+		04F2CB6B4C2335DF15407CE07A478176 /* BulkDocs.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BulkDocs.swift; path = Source/SwiftCloudant/Operations/Documents/BulkDocs.swift; sourceTree = "<group>"; };
 		0979DC19E6E03160A642F02B3E073FCC /* Pods-IBMConvTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-IBMConvTests.release.xcconfig"; sourceTree = "<group>"; };
+		097B2505F3524D1D1FD487A7239127AE /* Pods_IBMConv.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IBMConv.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B9FE19011B68316A7780F96719EA184 /* SwiftCloudant-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftCloudant-dummy.m"; sourceTree = "<group>"; };
 		0BAE84352F19176A95CC0F7CBF7CBB70 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E1A667F2548C9AC74544ED4186C6FD5 /* Operation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Operation.swift; path = Source/SwiftCloudant/Operations/Operation.swift; sourceTree = "<group>"; };
+		0E2B0DC1C7A676BB7899D579D1D78333 /* SwiftCloudant-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftCloudant-umbrella.h"; sourceTree = "<group>"; };
 		1146FA570FA39DD281F795897CFC8AC3 /* Pods-IBMConvUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-IBMConvUITests-frameworks.sh"; sourceTree = "<group>"; };
 		16819042CCE34DFC4C467B187A633F44 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17A64F38B137D20852235DDFB94FC67F /* FindDocumentsOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FindDocumentsOperation.swift; path = Source/SwiftCloudant/Operations/Query/FindDocumentsOperation.swift; sourceTree = "<group>"; };
 		19B8CF1BE706C06B1E83DEDFCFD08D30 /* Pods-IBMConvTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-IBMConvTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		1B74523F4A66B620DB2163D9CC9CE73C /* Pods-IBMConvTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-IBMConvTests.modulemap"; sourceTree = "<group>"; };
-		1C7A2708D7C3C9D6CB3546F43E2F9FDD /* Pods-IBMConv.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-IBMConv.modulemap"; sourceTree = "<group>"; };
+		1B74523F4A66B620DB2163D9CC9CE73C /* Pods-IBMConvTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-IBMConvTests.modulemap"; sourceTree = "<group>"; };
+		1C200592117FE34899B18A5C0645192E /* ReadAttachmentOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReadAttachmentOperation.swift; path = Source/SwiftCloudant/Operations/Documents/ReadAttachmentOperation.swift; sourceTree = "<group>"; };
+		1C7A2708D7C3C9D6CB3546F43E2F9FDD /* Pods-IBMConv.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-IBMConv.modulemap"; sourceTree = "<group>"; };
 		1D0D20B979642F97AD61021205B855E3 /* Pods-IBMConvTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-IBMConvTests-frameworks.sh"; sourceTree = "<group>"; };
 		1E96666320A2ABE282F4FD7725C51E2A /* Pods-IBMConv-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-IBMConv-resources.sh"; sourceTree = "<group>"; };
 		220862270D73435591ABAE0F013D25EE /* Pods-IBMConv-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-IBMConv-acknowledgements.markdown"; sourceTree = "<group>"; };
 		274A0979305882163C4FCD08C36B7468 /* Pods-IBMConvTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-IBMConvTests-dummy.m"; sourceTree = "<group>"; };
+		2B99BBC9EBCEB41694EE2D5B86CD00B4 /* Pods_IBMConvUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IBMConvUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3449C46FF3C94E5EE989C1B3D12AD908 /* Pods-IBMConv-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-IBMConv-acknowledgements.plist"; sourceTree = "<group>"; };
 		3C481A5E0FB79D7796A64AE11170A2DE /* Pods-IBMConvTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-IBMConvTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3E72E76D93E0ADC68C94BB84D44454FB /* SwiftCloudant.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftCloudant.xcconfig; sourceTree = "<group>"; };
+		40159F8E28BC3219E00D53E4007B9EC2 /* PutDocumentOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PutDocumentOperation.swift; path = Source/SwiftCloudant/Operations/Documents/PutDocumentOperation.swift; sourceTree = "<group>"; };
+		4D51F118A149E75D0A2BA2D683389452 /* RequestBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestBuilder.swift; path = Source/SwiftCloudant/HTTP/RequestBuilder.swift; sourceTree = "<group>"; };
+		5D4893F6F172E06229F28A003E6BE3AB /* DeleteDatabaseOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DeleteDatabaseOperation.swift; path = Source/SwiftCloudant/Operations/Server/DeleteDatabaseOperation.swift; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7538933DE80D89C377C1E65628214130 /* PutAttachmentOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PutAttachmentOperation.swift; path = Source/SwiftCloudant/Operations/Documents/PutAttachmentOperation.swift; sourceTree = "<group>"; };
 		789E3F4645B9BC96180CC38CAD82D97D /* Pods-IBMConv.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-IBMConv.debug.xcconfig"; sourceTree = "<group>"; };
-		791CB72E98244034A7295E3530AF23BA /* Pods_IBMConv.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_IBMConv.framework; path = "Pods-IBMConv.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B46576ACD1B6C1D891A3E2707855FD2 /* Pods-IBMConv-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-IBMConv-dummy.m"; sourceTree = "<group>"; };
 		7D39B2877064C67C52247250513BA03E /* Pods-IBMConvUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-IBMConvUITests.release.xcconfig"; sourceTree = "<group>"; };
-		815614D220ABBC9F65910D679F09F9F4 /* Pods_IBMConvTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_IBMConvTests.framework; path = "Pods-IBMConvTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8474D22DA8A9C638892EF5F89356F3FB /* Pods-IBMConv-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-IBMConv-umbrella.h"; sourceTree = "<group>"; };
+		8672F6363AC1B6B434733E5AA44FAA63 /* ViewPaging.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ViewPaging.swift; path = Source/SwiftCloudant/Operations/Views/ViewPaging.swift; sourceTree = "<group>"; };
+		88CB8EA09AB42F464F342F089D3225EF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C20249D865DE3503DFFFA24C256ACFD /* SwiftCloudant.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftCloudant.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F3645D31D2E173E67433F27C41412E6 /* Pods-IBMConvUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-IBMConvUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9801435923D2340EFF0AF55300E616C9 /* DeleteAttachmentOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DeleteAttachmentOperation.swift; path = Source/SwiftCloudant/Operations/Documents/DeleteAttachmentOperation.swift; sourceTree = "<group>"; };
+		A0B9734F6CC8BE62D10871C66FDC8CFB /* GetAllDocsOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GetAllDocsOperation.swift; path = Source/SwiftCloudant/Operations/Views/GetAllDocsOperation.swift; sourceTree = "<group>"; };
 		A4020AEB70E4D2ED8C138BFBCAD7EDFF /* Pods-IBMConvTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-IBMConvTests.debug.xcconfig"; sourceTree = "<group>"; };
-		A94E7B4EC92A504D6A446E930AA99F0A /* Pods_IBMConvUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_IBMConvUITests.framework; path = "Pods-IBMConvUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A57BB9A0D8A80BBE961D1DFD55A0CACC /* SwiftCloudant.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftCloudant.modulemap; sourceTree = "<group>"; };
 		A97F949135838CFCA56ADDA420BA6A41 /* Pods-IBMConv-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-IBMConv-frameworks.sh"; sourceTree = "<group>"; };
 		AB571CD3ED47EDC0F44AE425A18354F6 /* Pods-IBMConvUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-IBMConvUITests-umbrella.h"; sourceTree = "<group>"; };
+		ABA5741C8D5F49485EBAD07B850D073D /* RequestExecutor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestExecutor.swift; path = Source/SwiftCloudant/HTTP/RequestExecutor.swift; sourceTree = "<group>"; };
 		AF285416299C7DBAE82F7756B5DC67AD /* Pods-IBMConvUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-IBMConvUITests-resources.sh"; sourceTree = "<group>"; };
 		B53D7C910FBA7D27278382BE10F8D4A0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5541C7FF0F4683582302E3AD994912B /* Pods-IBMConv.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-IBMConv.release.xcconfig"; sourceTree = "<group>"; };
 		B9AC7BD7B62FA04C235820A9AA7C323A /* Pods-IBMConvTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-IBMConvTests-umbrella.h"; sourceTree = "<group>"; };
-		C01828BD925D265270B62E527D5AB287 /* Pods-IBMConvUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-IBMConvUITests.modulemap"; sourceTree = "<group>"; };
+		C01828BD925D265270B62E527D5AB287 /* Pods-IBMConvUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-IBMConvUITests.modulemap"; sourceTree = "<group>"; };
+		C1547CE2D60B8661D94FA7A088FAF785 /* CouchDatabaseOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CouchDatabaseOperation.swift; path = Source/SwiftCloudant/Operations/Server/CouchDatabaseOperation.swift; sourceTree = "<group>"; };
+		C39EDA82D0F883BA8EAF0D2F56E0F100 /* DeleteQueryIndexOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DeleteQueryIndexOperation.swift; path = Source/SwiftCloudant/Operations/Query/DeleteQueryIndexOperation.swift; sourceTree = "<group>"; };
+		C7A3514FA32EAA188EC7E75F095CE17B /* DeleteDocumentOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DeleteDocumentOperation.swift; path = Source/SwiftCloudant/Operations/Documents/DeleteDocumentOperation.swift; sourceTree = "<group>"; };
+		C7E17B31397FDB2614CC3F3E06EF1CF5 /* OperationProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OperationProtocols.swift; path = Source/SwiftCloudant/Operations/OperationProtocols.swift; sourceTree = "<group>"; };
 		C805C194F2016FF8912FE8595BDD3814 /* Pods-IBMConvUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-IBMConvUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C8B09F7D2EFD164BF62AE05F807AABD8 /* GetDocumentOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GetDocumentOperation.swift; path = Source/SwiftCloudant/Operations/Documents/GetDocumentOperation.swift; sourceTree = "<group>"; };
+		CD0FF24D5891B43940F646C5B84C5E2F /* SwiftCloudant-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftCloudant-prefix.pch"; sourceTree = "<group>"; };
+		D3B31864CDB3D55EA53586AC3F9E3E91 /* CreateDatabaseOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CreateDatabaseOperation.swift; path = Source/SwiftCloudant/Operations/Server/CreateDatabaseOperation.swift; sourceTree = "<group>"; };
 		DAAAEE7C8F1B7EFFD15B43B4C47F560F /* Pods-IBMConvUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-IBMConvUITests-dummy.m"; sourceTree = "<group>"; };
+		E118FDA91A65FCFE6683B0520A3C1D2C /* ViewLikeOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ViewLikeOperation.swift; path = Source/SwiftCloudant/Operations/Views/ViewLikeOperation.swift; sourceTree = "<group>"; };
+		E32EFEE81CED9BC1418235C93AC58BE6 /* Pods_IBMConvTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IBMConvTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E38F913E116F6E0F0C9F4790194C0504 /* CouchClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CouchClient.swift; path = Source/SwiftCloudant/CouchClient.swift; sourceTree = "<group>"; };
+		E81582D0C857A312DED851B1137164D2 /* QueryViewOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QueryViewOperation.swift; path = Source/SwiftCloudant/Operations/Views/QueryViewOperation.swift; sourceTree = "<group>"; };
 		EDBD93F0FDABF092CD81C9E391EE8CB7 /* Pods-IBMConvUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-IBMConvUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		F52C9FA7C57BCC406AB7607F60ADF31C /* GetAllDatabasesOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GetAllDatabasesOperation.swift; path = Source/SwiftCloudant/Operations/Server/GetAllDatabasesOperation.swift; sourceTree = "<group>"; };
 		F7C0D07F4F988CF19B4268FD4596CA71 /* Pods-IBMConvTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-IBMConvTests-resources.sh"; sourceTree = "<group>"; };
+		FEE14DEDC5B06F46A4C07E729C849585 /* GetChangesOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GetChangesOperation.swift; path = Source/SwiftCloudant/Operations/Database/GetChangesOperation.swift; sourceTree = "<group>"; };
+		FFE28AB29467C1428A5422B470D55D23 /* CreateQueryIndexOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CreateQueryIndexOperation.swift; path = Source/SwiftCloudant/Operations/Query/CreateQueryIndexOperation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		01C9979936CF03C57CB1DE83F73A3149 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6CD4F0B4D185206AA46DEAADAFD85ED9 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		1D352F78507EA5FAE312EE4F487B20A4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				52D748B57C3799938D85E95FFF8FBD2B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		609366CFB3794DFF8880800F6B58D2E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2002441DA7F05F3756D5B41E8FFE814 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D482BE4C8FF2F945DC63C8A95797863 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A38AD1463F35AB65AB063788880B74F /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +162,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B269128B0E351D1A34A619E0084CCFD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				097B2505F3524D1D1FD487A7239127AE /* Pods_IBMConv.framework */,
+				E32EFEE81CED9BC1418235C93AC58BE6 /* Pods_IBMConvTests.framework */,
+				2B99BBC9EBCEB41694EE2D5B86CD00B4 /* Pods_IBMConvUITests.framework */,
+				8C20249D865DE3503DFFFA24C256ACFD /* SwiftCloudant.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		21014AAE828D70E5B23B72D8EFD464AD /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +181,20 @@
 				B0196BA0B25562B7CC8C5169AD9CBA83 /* Pods-IBMConvUITests */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		453D245D175C0DA333F045136EC367BD /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				88CB8EA09AB42F464F342F089D3225EF /* Info.plist */,
+				A57BB9A0D8A80BBE961D1DFD55A0CACC /* SwiftCloudant.modulemap */,
+				3E72E76D93E0ADC68C94BB84D44454FB /* SwiftCloudant.xcconfig */,
+				0B9FE19011B68316A7780F96719EA184 /* SwiftCloudant-dummy.m */,
+				CD0FF24D5891B43940F646C5B84C5E2F /* SwiftCloudant-prefix.pch */,
+				0E2B0DC1C7A676BB7899D579D1D78333 /* SwiftCloudant-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftCloudant";
 			sourceTree = "<group>";
 		};
 		456707AFFC9B32AFCB42535C460969D7 /* Pods-IBMConvTests */ = {
@@ -112,12 +215,21 @@
 			path = "Target Support Files/Pods-IBMConvTests";
 			sourceTree = "<group>";
 		};
+		4BD32FE4D34AF5617C2A760ACEB60049 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FA5D86B79EBD93D37EB47AB46215050B /* SwiftCloudant */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				B29D34D2A4CBFF281302967844CADB1A /* Products */,
+				4BD32FE4D34AF5617C2A760ACEB60049 /* Pods */,
+				0B269128B0E351D1A34A619E0084CCFD /* Products */,
 				21014AAE828D70E5B23B72D8EFD464AD /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -158,16 +270,6 @@
 			path = "Target Support Files/Pods-IBMConvUITests";
 			sourceTree = "<group>";
 		};
-		B29D34D2A4CBFF281302967844CADB1A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				791CB72E98244034A7295E3530AF23BA /* Pods_IBMConv.framework */,
-				815614D220ABBC9F65910D679F09F9F4 /* Pods_IBMConvTests.framework */,
-				A94E7B4EC92A504D6A446E930AA99F0A /* Pods_IBMConvUITests.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +284,39 @@
 				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		FA5D86B79EBD93D37EB47AB46215050B /* SwiftCloudant */ = {
+			isa = PBXGroup;
+			children = (
+				04F2CB6B4C2335DF15407CE07A478176 /* BulkDocs.swift */,
+				E38F913E116F6E0F0C9F4790194C0504 /* CouchClient.swift */,
+				C1547CE2D60B8661D94FA7A088FAF785 /* CouchDatabaseOperation.swift */,
+				D3B31864CDB3D55EA53586AC3F9E3E91 /* CreateDatabaseOperation.swift */,
+				FFE28AB29467C1428A5422B470D55D23 /* CreateQueryIndexOperation.swift */,
+				9801435923D2340EFF0AF55300E616C9 /* DeleteAttachmentOperation.swift */,
+				5D4893F6F172E06229F28A003E6BE3AB /* DeleteDatabaseOperation.swift */,
+				C7A3514FA32EAA188EC7E75F095CE17B /* DeleteDocumentOperation.swift */,
+				C39EDA82D0F883BA8EAF0D2F56E0F100 /* DeleteQueryIndexOperation.swift */,
+				17A64F38B137D20852235DDFB94FC67F /* FindDocumentsOperation.swift */,
+				F52C9FA7C57BCC406AB7607F60ADF31C /* GetAllDatabasesOperation.swift */,
+				A0B9734F6CC8BE62D10871C66FDC8CFB /* GetAllDocsOperation.swift */,
+				FEE14DEDC5B06F46A4C07E729C849585 /* GetChangesOperation.swift */,
+				C8B09F7D2EFD164BF62AE05F807AABD8 /* GetDocumentOperation.swift */,
+				0E1A667F2548C9AC74544ED4186C6FD5 /* Operation.swift */,
+				C7E17B31397FDB2614CC3F3E06EF1CF5 /* OperationProtocols.swift */,
+				7538933DE80D89C377C1E65628214130 /* PutAttachmentOperation.swift */,
+				40159F8E28BC3219E00D53E4007B9EC2 /* PutDocumentOperation.swift */,
+				E81582D0C857A312DED851B1137164D2 /* QueryViewOperation.swift */,
+				1C200592117FE34899B18A5C0645192E /* ReadAttachmentOperation.swift */,
+				4D51F118A149E75D0A2BA2D683389452 /* RequestBuilder.swift */,
+				ABA5741C8D5F49485EBAD07B850D073D /* RequestExecutor.swift */,
+				01E4CBC5B3F67AC0E031D0A894CF8024 /* URLSession.swift */,
+				E118FDA91A65FCFE6683B0520A3C1D2C /* ViewLikeOperation.swift */,
+				8672F6363AC1B6B434733E5AA44FAA63 /* ViewPaging.swift */,
+				453D245D175C0DA333F045136EC367BD /* Support Files */,
+			);
+			path = SwiftCloudant;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,34 +338,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D193229B0620AA08CAA64C62E95CF458 /* Headers */ = {
+		D2D1B02FC38C93749DB9819C717EAC65 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2B9BDA27752EE1639B2290921A976B6 /* Pods-IBMConv-umbrella.h in Headers */,
+				BF8DB6CF31128C80B8160F34F406D5EC /* Pods-IBMConv-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE9D07A13AEE1F68782F2E3FA9DCE777 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41BDAAD7C14D22357F929CABA1A748AD /* SwiftCloudant-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		15C4D097CE5F8C0B34CEC7A27E7BC4E4 /* Pods-IBMConv */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F9E33979218A355AA21D1A18FC4B79DD /* Build configuration list for PBXNativeTarget "Pods-IBMConv" */;
-			buildPhases = (
-				DC02BEABA702900C80250A1B045FD1A3 /* Sources */,
-				01C9979936CF03C57CB1DE83F73A3149 /* Frameworks */,
-				D193229B0620AA08CAA64C62E95CF458 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-IBMConv";
-			productName = "Pods-IBMConv";
-			productReference = 791CB72E98244034A7295E3530AF23BA /* Pods_IBMConv.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		35458015CCA13916EB2B0A9006772BA1 /* Pods-IBMConvTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D00579ED469FDF312C9D350BB3AB585E /* Build configuration list for PBXNativeTarget "Pods-IBMConvTests" */;
@@ -245,7 +371,7 @@
 			);
 			name = "Pods-IBMConvTests";
 			productName = "Pods-IBMConvTests";
-			productReference = 815614D220ABBC9F65910D679F09F9F4 /* Pods_IBMConvTests.framework */;
+			productReference = E32EFEE81CED9BC1418235C93AC58BE6 /* Pods_IBMConvTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		55F3E1E8969FD5EDD058AAEB1432A17C /* Pods-IBMConvUITests */ = {
@@ -262,7 +388,42 @@
 			);
 			name = "Pods-IBMConvUITests";
 			productName = "Pods-IBMConvUITests";
-			productReference = A94E7B4EC92A504D6A446E930AA99F0A /* Pods_IBMConvUITests.framework */;
+			productReference = 2B99BBC9EBCEB41694EE2D5B86CD00B4 /* Pods_IBMConvUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6858C04B7DD2DBE9D73C29CBCC2E85EF /* Pods-IBMConv */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6D912C0C33ABE6443049D8B4813E4617 /* Build configuration list for PBXNativeTarget "Pods-IBMConv" */;
+			buildPhases = (
+				1810D5779CEC3E03A7506253115F0A6C /* Sources */,
+				609366CFB3794DFF8880800F6B58D2E5 /* Frameworks */,
+				D2D1B02FC38C93749DB9819C717EAC65 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC99B56ED6DC3D7E7F939D0EE12DAB82 /* PBXTargetDependency */,
+			);
+			name = "Pods-IBMConv";
+			productName = "Pods-IBMConv";
+			productReference = 097B2505F3524D1D1FD487A7239127AE /* Pods_IBMConv.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9ADB9A61642953DFD37E7EB73AB856CC /* SwiftCloudant */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 29A4106854D1C93D428870CE18C14BC4 /* Build configuration list for PBXNativeTarget "SwiftCloudant" */;
+			buildPhases = (
+				F0004A990A37CEF63CB6386E83193B41 /* Sources */,
+				6D482BE4C8FF2F945DC63C8A95797863 /* Frameworks */,
+				DE9D07A13AEE1F68782F2E3FA9DCE777 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftCloudant;
+			productName = SwiftCloudant;
+			productReference = 8C20249D865DE3503DFFFA24C256ACFD /* SwiftCloudant.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -272,7 +433,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0920;
+				TargetAttributes = {
+					9ADB9A61642953DFD37E7EB73AB856CC = {
+						LastSwiftMigration = 0920;
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -282,13 +448,14 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = B29D34D2A4CBFF281302967844CADB1A /* Products */;
+			productRefGroup = 0B269128B0E351D1A34A619E0084CCFD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				15C4D097CE5F8C0B34CEC7A27E7BC4E4 /* Pods-IBMConv */,
+				6858C04B7DD2DBE9D73C29CBCC2E85EF /* Pods-IBMConv */,
 				35458015CCA13916EB2B0A9006772BA1 /* Pods-IBMConvTests */,
 				55F3E1E8969FD5EDD058AAEB1432A17C /* Pods-IBMConvUITests */,
+				9ADB9A61642953DFD37E7EB73AB856CC /* SwiftCloudant */,
 			);
 		};
 /* End PBXProject section */
@@ -302,6 +469,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1810D5779CEC3E03A7506253115F0A6C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1929A340E414AA328A8B94F8F4767D74 /* Pods-IBMConv-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		421E61FC15486973CAF354B1C1030BFF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -310,15 +485,49 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DC02BEABA702900C80250A1B045FD1A3 /* Sources */ = {
+		F0004A990A37CEF63CB6386E83193B41 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5962E6737D39F4E027DB781E69D56743 /* Pods-IBMConv-dummy.m in Sources */,
+				6A500A0C6836F5344B2AFF9319AD4EF8 /* BulkDocs.swift in Sources */,
+				BB9E7262A4726B73919A4DE40D82CBD3 /* CouchClient.swift in Sources */,
+				E75E7ADCC3F717A751E36BD4C7C30CC9 /* CouchDatabaseOperation.swift in Sources */,
+				FFFC747C82A90C0820A54C3DA2FB02B9 /* CreateDatabaseOperation.swift in Sources */,
+				FE71EC70450D72B11F7271DEC59AB393 /* CreateQueryIndexOperation.swift in Sources */,
+				E0ABFCAC9A1C8DEA038497A25AC6ACC5 /* DeleteAttachmentOperation.swift in Sources */,
+				61F932F5377F42FF0DC25E9ACBF74E96 /* DeleteDatabaseOperation.swift in Sources */,
+				CEAF41C67D7D15727D76DC02C4F304BF /* DeleteDocumentOperation.swift in Sources */,
+				EE3F9D52A6224E308DCBE0828F96FC98 /* DeleteQueryIndexOperation.swift in Sources */,
+				F02493B1BDBABDFA921C95D73D679164 /* FindDocumentsOperation.swift in Sources */,
+				C6D66A43A85B36357679A783741957CC /* GetAllDatabasesOperation.swift in Sources */,
+				EA6F97ECA06166FB5938531FA5973059 /* GetAllDocsOperation.swift in Sources */,
+				E68BA7658EF5FE4C466198753B15BD43 /* GetChangesOperation.swift in Sources */,
+				06F91D899035D1F90F00D33D54F4CDF8 /* GetDocumentOperation.swift in Sources */,
+				25F87EEE8A1557D3701B375BDC0C7DF3 /* Operation.swift in Sources */,
+				7A2219CBC2292E0CE39961142693567B /* OperationProtocols.swift in Sources */,
+				9CD5D5B546D028A16B95226AE58BBECC /* PutAttachmentOperation.swift in Sources */,
+				D4AD965B06068C2C854BF771F85AEA08 /* PutDocumentOperation.swift in Sources */,
+				C89D5BB76E8C35133E8E8C6B418D1A1D /* QueryViewOperation.swift in Sources */,
+				1F879B43F28A4E77AE1AE5C52C4E0AED /* ReadAttachmentOperation.swift in Sources */,
+				40396A60695777F2AB904B2FC251F3EE /* RequestBuilder.swift in Sources */,
+				05742C5DC11A2FEA9A95588F2F9ED0C2 /* RequestExecutor.swift in Sources */,
+				D1A90C8480D5679FBC5759FEAC1D05B1 /* SwiftCloudant-dummy.m in Sources */,
+				1B8DD6A26E58089D53026A34891F8373 /* URLSession.swift in Sources */,
+				2DB7884EEEC82DA939F9E0C33E1A0BEF /* ViewLikeOperation.swift in Sources */,
+				E82C2B33D842EA50CB3E109A53C536CF /* ViewPaging.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CC99B56ED6DC3D7E7F939D0EE12DAB82 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftCloudant;
+			target = 9ADB9A61642953DFD37E7EB73AB856CC /* SwiftCloudant */;
+			targetProxy = 8EC2A79A6FBBD89422B3C71009A8976D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		03B6B6BE11044919F799253E66B4227E /* Release */ = {
@@ -347,6 +556,38 @@
 				PRODUCT_NAME = Pods_IBMConvTests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		10CB4E70BE870F95E5CCA73293468A6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E72E76D93E0ADC68C94BB84D44454FB /* SwiftCloudant.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftCloudant/SwiftCloudant-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftCloudant/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftCloudant/SwiftCloudant.modulemap";
+				PRODUCT_NAME = SwiftCloudant;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -414,6 +655,71 @@
 			};
 			name = Debug;
 		};
+		4BB6199A35E58FC27E02E62928C793D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 789E3F4645B9BC96180CC38CAD82D97D /* Pods-IBMConv.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-IBMConv/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-IBMConv/Pods-IBMConv.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_IBMConv;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		63F67C70E6862ED4E985D5C7D6C2A235 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E72E76D93E0ADC68C94BB84D44454FB /* SwiftCloudant.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftCloudant/SwiftCloudant-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftCloudant/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftCloudant/SwiftCloudant.modulemap";
+				PRODUCT_NAME = SwiftCloudant;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		89C8BB24E37B25BAEEB8FBA01EE05DAF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -465,41 +771,10 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
-		};
-		8DFC77308C61578A6204ADC97052AF96 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 789E3F4645B9BC96180CC38CAD82D97D /* Pods-IBMConv.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-IBMConv/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-IBMConv/Pods-IBMConv.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_IBMConv;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		B8C6089B3C0799EF80E6D9078CE86612 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -534,7 +809,7 @@
 			};
 			name = Release;
 		};
-		BE49E4F6A0F8F6C2560B60B9CA4EF86E /* Release */ = {
+		C0F9950690A851A4E3B0E622FE875DA5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B5541C7FF0F4683582302E3AD994912B /* Pods-IBMConv.release.xcconfig */;
 			buildSettings = {
@@ -560,6 +835,7 @@
 				PRODUCT_NAME = Pods_IBMConv;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -634,11 +910,29 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		29A4106854D1C93D428870CE18C14BC4 /* Build configuration list for PBXNativeTarget "SwiftCloudant" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63F67C70E6862ED4E985D5C7D6C2A235 /* Debug */,
+				10CB4E70BE870F95E5CCA73293468A6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				39C5BC78A31CDE101068C530CAC7FA0F /* Debug */,
 				89C8BB24E37B25BAEEB8FBA01EE05DAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6D912C0C33ABE6443049D8B4813E4617 /* Build configuration list for PBXNativeTarget "Pods-IBMConv" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4BB6199A35E58FC27E02E62928C793D2 /* Debug */,
+				C0F9950690A851A4E3B0E622FE875DA5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -657,15 +951,6 @@
 			buildConfigurations = (
 				FC5CA91AD5A3ACBC400CCD649587F220 /* Debug */,
 				03B6B6BE11044919F799253E66B4227E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F9E33979218A355AA21D1A18FC4B79DD /* Build configuration list for PBXNativeTarget "Pods-IBMConv" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8DFC77308C61578A6204ADC97052AF96 /* Debug */,
-				BE49E4F6A0F8F6C2560B60B9CA4EF86E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
