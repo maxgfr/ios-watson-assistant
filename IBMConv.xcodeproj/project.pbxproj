@@ -10,6 +10,8 @@
 		339B78FB4611191102816589 /* Pods_IBMConvUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 636EA6D2F782253648BFB1E1 /* Pods_IBMConvUITests.framework */; };
 		3FF9EAC989360718A2EBF248 /* Pods_IBMConvTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30D7AF593E8D3B6D9148739A /* Pods_IBMConvTests.framework */; };
 		68E8443460225529C24D0987 /* Pods_IBMConv.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 535C66EFABB65155F967CDE2 /* Pods_IBMConv.framework */; };
+		A52AC3911FF25C8D00632365 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52AC3901FF25C8D00632365 /* Credentials.swift */; };
+		A52AC3951FF25DCB00632365 /* CredentialsExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52AC3941FF25DCB00632365 /* CredentialsExample.swift */; };
 		A5315A1C1FEC071F00294C79 /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5315A1B1FEC071F00294C79 /* Eureka.framework */; };
 		A5315A1E1FEC073000294C79 /* Eureka.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5315A1B1FEC071F00294C79 /* Eureka.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A5315A231FEC0B6F00294C79 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5315A221FEC0B6F00294C79 /* RegisterViewController.swift */; };
@@ -64,6 +66,8 @@
 		636EA6D2F782253648BFB1E1 /* Pods_IBMConvUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IBMConvUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		74B09F3C8B524DFC41C0C748 /* Pods-IBMConv.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IBMConv.release.xcconfig"; path = "Pods/Target Support Files/Pods-IBMConv/Pods-IBMConv.release.xcconfig"; sourceTree = "<group>"; };
 		85752B19A3D79D1582B046A9 /* Pods-IBMConv.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IBMConv.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IBMConv/Pods-IBMConv.debug.xcconfig"; sourceTree = "<group>"; };
+		A52AC3901FF25C8D00632365 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
+		A52AC3941FF25DCB00632365 /* CredentialsExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsExample.swift; sourceTree = "<group>"; };
 		A5315A1B1FEC071F00294C79 /* Eureka.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Eureka.framework; path = Carthage/Build/iOS/Eureka.framework; sourceTree = "<group>"; };
 		A5315A221FEC0B6F00294C79 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		A5315A241FEC11E900294C79 /* SwiftyButton.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyButton.framework; path = Carthage/Build/iOS/SwiftyButton.framework; sourceTree = "<group>"; };
@@ -181,6 +185,8 @@
 				A591F47E1FEC039300A3338B /* Assets.xcassets */,
 				A591F4801FEC039300A3338B /* LaunchScreen.storyboard */,
 				A591F4831FEC039300A3338B /* Info.plist */,
+				A52AC3941FF25DCB00632365 /* CredentialsExample.swift */,
+				A52AC3901FF25C8D00632365 /* Credentials.swift */,
 			);
 			path = IBMConv;
 			sourceTree = "<group>";
@@ -499,8 +505,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5A737E31FF1230D00D584AB /* LoginViewController.swift in Sources */,
+				A52AC3951FF25DCB00632365 /* CredentialsExample.swift in Sources */,
 				A591F47A1FEC039300A3338B /* HomeViewController.swift in Sources */,
 				A591F4781FEC039300A3338B /* AppDelegate.swift in Sources */,
+				A52AC3911FF25C8D00632365 /* Credentials.swift in Sources */,
 				A5315A231FEC0B6F00294C79 /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
