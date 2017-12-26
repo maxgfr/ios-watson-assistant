@@ -39,14 +39,14 @@ class RegisterViewController: UIViewController {
         // Check for empty fields
         if((userEmail?.isEmpty)! || (userPassword?.isEmpty)! || (userRepeatPassword?.isEmpty)!){
             // Display alert message
-            displayMyAlertMessage(userMessage: "All fields are required")
+            displayMyAlertMessage(userMessage: "All fields are required", type:"Alert")
             return
         }
         
         //Check if passwords match
         if(userPassword != userRepeatPassword){
             // Display an alert message
-            displayMyAlertMessage(userMessage: "Passwords do not match");
+            displayMyAlertMessage(userMessage: "Passwords do not match", type:"Alert");
             return;
         }
         
@@ -60,12 +60,18 @@ class RegisterViewController: UIViewController {
         }
         client.add(operation:create)
         
-        //displayMyAlertMessage(userMessage: "coucou")
+        //Success message
+        let refreshAlert = UIAlertController(title: "Congratulation", message: "Your count was created.", preferredStyle: UIAlertControllerStyle.alert)
+        refreshAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
+            self.dismiss(animated: true, completion:nil)
+        }))
+        self.present(refreshAlert, animated: true, completion: nil)
+        
         return
     }
     
-    func displayMyAlertMessage(userMessage:String){
-        let myAlert = UIAlertController(title:"Alert", message:userMessage, preferredStyle: UIAlertControllerStyle.alert);
+    func displayMyAlertMessage(userMessage:String, type:String){
+        let myAlert = UIAlertController(title:type, message:userMessage, preferredStyle: UIAlertControllerStyle.alert);
         let okAction = UIAlertAction(title:"Ok", style:UIAlertActionStyle.default, handler:nil);
         myAlert.addAction(okAction);
         self.present(myAlert, animated:true, completion:nil);
