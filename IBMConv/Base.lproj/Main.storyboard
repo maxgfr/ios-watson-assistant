@@ -30,7 +30,18 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="Wj4-8D-qAw"/>
+                    <navigationItem key="navigationItem" id="Wj4-8D-qAw">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="WLD-Gm-cZz">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nez-ed-XwA">
+                                <rect key="frame" x="269" y="7" width="90" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Deconnexion"/>
+                                <connections>
+                                    <action selector="onClickDeco:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zix-wW-kKh"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <segue destination="tdh-zv-R8U" kind="presentation" identifier="loginView" id="BiY-Et-d0a"/>
@@ -237,7 +248,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="UfI-3M-Woo"/>
-        <segue reference="x6i-yh-V7O"/>
+        <segue reference="BiY-Et-d0a"/>
     </inferredMetricsTieBreakers>
 </document>

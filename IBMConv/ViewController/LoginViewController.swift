@@ -42,13 +42,14 @@ class LoginViewController: UIViewController {
         let cloudantURL = NSURL(string:Credentials.CloudantUrl)!
         let client = CouchDBClient(url:cloudantURL as URL, username:Credentials.CloudantUsername, password:Credentials.CloudantPassword)
         let dbName = Credentials.CloudantName
-        
         // Hash password
         let hash = userPassword?.sha1()
         //Verification
         var bool = false;
         //Synchronisation
         let myGroup = DispatchGroup()
+        //To Store in local
+        let defaults = UserDefaults.standard
         
         //Let's wait
         myGroup.enter()
@@ -76,6 +77,7 @@ class LoginViewController: UIViewController {
                 refreshAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
                     self.dismiss(animated: true, completion:nil)
                 }))
+                defaults.set(username!, forKey: "Identifiant")
                 self.present(refreshAlert, animated: true, completion: nil)
             } else {
                 self.displayMyAlertMessage(userMessage: "Your username or password are incorrect.", type:"Alert")

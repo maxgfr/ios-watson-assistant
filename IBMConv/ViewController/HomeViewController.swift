@@ -22,10 +22,20 @@ class HomeViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool){
-        self.performSegue(withIdentifier: "loginView", sender: self);
+        let defaults = UserDefaults.standard
+        let username = defaults.string(forKey: "Identifiant")
+        if (username == nil) {
+            self.performSegue(withIdentifier: "loginView", sender: self);
+        } else {
+            print(username!)
+        }
     }
 
-    
-    
+    @IBAction func onClickDeco(_ sender: Any) {
+        let defaults = UserDefaults.standard
+        defaults.removeObject(forKey: "Identifiant")
+        print("Deconnexion")
+        self.performSegue(withIdentifier: "loginView", sender: self);
+    }    
     
 }
