@@ -6,7 +6,10 @@ target 'IBMConv' do
   use_frameworks!
 
   # Pods for IBMConv
-  pod 'SwiftCloudant', :git => 'https://github.com/cloudant/swift-cloudant.git'  
+  pod 'CryptoSwift', :git => "https://github.com/krzyzanowskim/CryptoSwift", :branch => "swift32"
+  pod 'SwiftCloudant', :git => 'https://github.com/cloudant/swift-cloudant.git'
+  pod 'SwiftyJSON'
+
   target 'IBMConvTests' do
     inherit! :search_paths
     # Pods for testing

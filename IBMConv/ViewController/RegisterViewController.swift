@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftCloudant
+import CryptoSwift
 
 class RegisterViewController: UIViewController {
     
@@ -50,8 +51,11 @@ class RegisterViewController: UIViewController {
             return;
         }
         
+        // Hash password
+        let hash = userPassword?.sha1()
+        
         // Create a document
-        let create = PutDocumentOperation(body: ["username":userEmail ?? "no_username", "password":userPassword ?? "no_password"], databaseName: dbName) {(response, httpInfo, error) in
+        let create = PutDocumentOperation(body: ["username":userEmail ?? "no_username", "password":hash ?? "no_password"], databaseName: dbName) {(response, httpInfo, error) in
             if let error = error {
                 print("Encountered an error while creating a document. Error:\(error)")
             } else {

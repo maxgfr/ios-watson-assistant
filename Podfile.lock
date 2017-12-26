@@ -1,21 +1,33 @@
 PODS:
+  - CryptoSwift (0.7.0)
   - SwiftCloudant (0.7.0)
+  - SwiftyJSON (4.0.0)
 
 DEPENDENCIES:
+  - CryptoSwift (from `https://github.com/krzyzanowskim/CryptoSwift`, branch `swift32`)
   - SwiftCloudant (from `https://github.com/cloudant/swift-cloudant.git`)
+  - SwiftyJSON
 
 EXTERNAL SOURCES:
+  CryptoSwift:
+    :branch: swift32
+    :git: https://github.com/krzyzanowskim/CryptoSwift
   SwiftCloudant:
     :git: https://github.com/cloudant/swift-cloudant.git
 
 CHECKOUT OPTIONS:
+  CryptoSwift:
+    :commit: 036edc3f858f9a7d9db765688418ea55be64e941
+    :git: https://github.com/krzyzanowskim/CryptoSwift
   SwiftCloudant:
     :commit: 8bf984ef9f4040dcb50169c57769888f71f4fc38
     :git: https://github.com/cloudant/swift-cloudant.git
 
 SPEC CHECKSUMS:
+  CryptoSwift: 47c539f7f73369cdd623942bfe4e4eeb56dfc3e7
   SwiftCloudant: 07d48f1e12241fde9eb8bfe962c0005d3d8574c5
+  SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
 
-PODFILE CHECKSUM: e5d61e4f59ccd4f0b6b918cf1c5a0c7109cffa4d
+PODFILE CHECKSUM: 20f2920c34571ddf021cd318a81c2c6fb4e33b7f
 
 COCOAPODS: 1.4.0.rc.1
