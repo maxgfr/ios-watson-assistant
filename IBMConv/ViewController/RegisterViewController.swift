@@ -51,11 +51,11 @@ class RegisterViewController: UIViewController {
         }
         
         // Create a document
-        let create = PutDocumentOperation(id: "doc1", body: ["hello":"world"], databaseName: dbName) {(response, httpInfo, error) in
+        let create = PutDocumentOperation(body: ["username":userEmail ?? "no_username", "password":userPassword ?? "no_password"], databaseName: dbName) {(response, httpInfo, error) in
             if let error = error {
                 print("Encountered an error while creating a document. Error:\(error)")
             } else {
-                print("Created document \(response?["id"]) with revision id \(response?["rev"])")
+                print("Created document \(String(describing: response?["id"])) with revision id \(String(describing: response?["rev"]))")
             }
         }
         client.add(operation:create)
