@@ -18,20 +18,8 @@ Il faut impérativement renommer le fichier CredentialsExample.swift en Credenti
 
 ### La connexion :
 
-![alt text](https://github.com/maxgfr/IBMConv/blob/master/tuto/connexion.png)
-
-#### Connexion réussi
-
 ![alt text](https://github.com/maxgfr/IBMConv/blob/master/tuto/connexion_reussi.png)
-
-#### Identifiant ou mot de passe incorrect
-
-![alt text](https://github.com/maxgfr/IBMConv/blob/master/tuto/connexion_fail.png)
 
 ### L'enregistrement:
 
-![alt text](https://github.com/maxgfr/IBMConv/blob/master/tuto/enregistrement.png)
-
-
-#### Enregistrement réussi
 ![alt text](https://github.com/maxgfr/IBMConv/blob/master/tuto/enregistrement_reussi.png)
