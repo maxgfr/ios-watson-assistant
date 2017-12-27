@@ -54,7 +54,7 @@ class HomeViewController: JSQMessagesViewController {
         let failure = { (error: Error) in print(error) }
         conversation.message(workspaceID: workspaceIDConv, failure: failure) {
             response in
-            print(response.output.text)
+            //print(response.output.text)
             for word in response.output.text {
                 //let msg = JSQMessage(senderId: "2", displayName: "Watson", text: word)
                 //self.messages.append(msg!)
@@ -62,9 +62,7 @@ class HomeViewController: JSQMessagesViewController {
             }
             self.context = response.context
         }
-        
         self.messages.append(JSQMessage(senderId: "2", displayName: "Watson", text: "Bonjour, comment puis-je vous aider ?"))
-        
     }
     
     override func viewDidAppear(_ animated: Bool){
