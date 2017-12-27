@@ -10,6 +10,20 @@ Il faut impérativement renommer le fichier CredentialsExample.swift en Credenti
 
 ![alt text](https://github.com/maxgfr/IBMConv/blob/master/tuto/vcap.png)
 
+
+Il faudra également ne pas oublier d'installer les dépendances.
+
+### COCOAPODS
+```
+    pod install
+```
+
+### Carthage
+```
+    carthage update --platform iOS
+```
+
+
 ## Conversation :
 
 ![alt text](https://github.com/maxgfr/IBMConv/blob/master/tuto/conv.png)
