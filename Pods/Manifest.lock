@@ -1,10 +1,14 @@
 PODS:
   - CryptoSwift (0.7.0)
+  - JSQMessagesViewController (7.3.5):
+    - JSQSystemSoundPlayer (~> 2.0.1)
+  - JSQSystemSoundPlayer (2.0.1)
   - SwiftCloudant (0.7.0)
   - SwiftyJSON (4.0.0)
 
 DEPENDENCIES:
   - CryptoSwift (from `https://github.com/krzyzanowskim/CryptoSwift`, branch `swift32`)
+  - JSQMessagesViewController
   - SwiftCloudant (from `https://github.com/cloudant/swift-cloudant.git`)
   - SwiftyJSON
 
@@ -25,9 +29,11 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   CryptoSwift: 47c539f7f73369cdd623942bfe4e4eeb56dfc3e7
+  JSQMessagesViewController: 6587f56aedbcb150a8ba1d968e1ef58b1bc758b7
+  JSQSystemSoundPlayer: c5850e77a4363ffd374cd851154b9af93264ed8d
   SwiftCloudant: 07d48f1e12241fde9eb8bfe962c0005d3d8574c5
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
 
-PODFILE CHECKSUM: 20f2920c34571ddf021cd318a81c2c6fb4e33b7f
+PODFILE CHECKSUM: 0746584e60dbc7fc5b1ad7817cd1af19a3937343
 
 COCOAPODS: 1.4.0.rc.1

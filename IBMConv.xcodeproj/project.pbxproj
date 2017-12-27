@@ -25,6 +25,9 @@
 		A591F48D1FEC039300A3338B /* IBMConvTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A591F48C1FEC039300A3338B /* IBMConvTests.swift */; };
 		A591F4981FEC039300A3338B /* IBMConvUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A591F4971FEC039300A3338B /* IBMConvUITests.swift */; };
 		A5A737E31FF1230D00D584AB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A737E21FF1230D00D584AB /* LoginViewController.swift */; };
+		A5EA536F1FF3AD0F00523295 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EA536E1FF3AD0F00523295 /* User.swift */; };
+		A5EA53721FF3CBF000523295 /* ConversationV1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5EA53711FF3CBF000523295 /* ConversationV1.framework */; };
+		A5EA53731FF3CC0100523295 /* ConversationV1.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5EA53711FF3CBF000523295 /* ConversationV1.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				A5EA53731FF3CC0100523295 /* ConversationV1.framework in CopyFiles */,
 				A5315A261FEC11F700294C79 /* SwiftyButton.framework in CopyFiles */,
 				A5315A1E1FEC073000294C79 /* Eureka.framework in CopyFiles */,
 			);
@@ -85,6 +89,8 @@
 		A591F4971FEC039300A3338B /* IBMConvUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBMConvUITests.swift; sourceTree = "<group>"; };
 		A591F4991FEC039300A3338B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5A737E21FF1230D00D584AB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A5EA536E1FF3AD0F00523295 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		A5EA53711FF3CBF000523295 /* ConversationV1.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ConversationV1.framework; path = Carthage/Build/iOS/ConversationV1.framework; sourceTree = "<group>"; };
 		A8AB87FFC4B4ED0035FA8231 /* Pods-IBMConvTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IBMConvTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IBMConvTests/Pods-IBMConvTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EC0B442ACFB4769268B572A0 /* Pods-IBMConvUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IBMConvUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IBMConvUITests/Pods-IBMConvUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5EA53721FF3CBF000523295 /* ConversationV1.framework in Frameworks */,
 				A5315A251FEC11EA00294C79 /* SwiftyButton.framework in Frameworks */,
 				A5315A1C1FEC071F00294C79 /* Eureka.framework in Frameworks */,
 				68E8443460225529C24D0987 /* Pods_IBMConv.framework in Frameworks */,
@@ -122,6 +129,7 @@
 		1D91FA8A5FC7769A60172E16 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A5EA53711FF3CBF000523295 /* ConversationV1.framework */,
 				A5315A241FEC11E900294C79 /* SwiftyButton.framework */,
 				A5315A1B1FEC071F00294C79 /* Eureka.framework */,
 				535C66EFABB65155F967CDE2 /* Pods_IBMConv.framework */,
@@ -179,6 +187,7 @@
 		A591F4761FEC039300A3338B /* IBMConv */ = {
 			isa = PBXGroup;
 			children = (
+				A5EA53701FF3AD1D00523295 /* Model */,
 				A5315A1F1FEC0B0300294C79 /* ViewController */,
 				A591F4771FEC039300A3338B /* AppDelegate.swift */,
 				A591F47B1FEC039300A3338B /* Main.storyboard */,
@@ -207,6 +216,14 @@
 				A591F4991FEC039300A3338B /* Info.plist */,
 			);
 			path = IBMConvUITests;
+			sourceTree = "<group>";
+		};
+		A5EA53701FF3AD1D00523295 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A5EA536E1FF3AD0F00523295 /* User.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -424,12 +441,16 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-IBMConv/Pods-IBMConv-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/JSQMessagesViewController/JSQMessagesViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/JSQSystemSoundPlayer/JSQSystemSoundPlayer.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftCloudant/SwiftCloudant.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQMessagesViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQSystemSoundPlayer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftCloudant.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
@@ -514,6 +535,7 @@
 				A591F4781FEC039300A3338B /* AppDelegate.swift in Sources */,
 				A52AC3911FF25C8D00632365 /* Credentials.swift in Sources */,
 				A5315A231FEC0B6F00294C79 /* RegisterViewController.swift in Sources */,
+				A5EA536F1FF3AD0F00523295 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

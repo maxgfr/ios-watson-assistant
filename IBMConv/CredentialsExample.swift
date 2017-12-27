@@ -11,4 +11,8 @@ public struct CredentialsExample {
     public static let CloudantUsername = "xxx"
     public static let CloudantPassword = "xxx"
     public static let CloudantName = "xxx"
+    public static let ConversationUsername = "xxx"
+    public static let ConversationPassword = "xxx"
+    public static let ConversationVersion = "xxx"
+    public static let ConversationWorkspace = "xxx"
 }

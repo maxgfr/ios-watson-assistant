@@ -73,7 +73,7 @@ class LoginViewController: UIViewController {
         myGroup.notify(queue: .main) {
             print("Finished all requests.")
             if (bool) {
-                let refreshAlert = UIAlertController(title: "Congratulation", message: "Your count was created.", preferredStyle: UIAlertControllerStyle.alert)
+                let refreshAlert = UIAlertController(title: "Congratulation", message: "Your are  now connected.", preferredStyle: UIAlertControllerStyle.alert)
                 refreshAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
                     self.dismiss(animated: true, completion:nil)
                 }))

@@ -9,6 +9,7 @@ target 'IBMConv' do
   pod 'CryptoSwift', :git => "https://github.com/krzyzanowskim/CryptoSwift", :branch => "swift32"
   pod 'SwiftCloudant', :git => 'https://github.com/cloudant/swift-cloudant.git'
   pod 'SwiftyJSON'
+  pod 'JSQMessagesViewController'
 
   target 'IBMConvTests' do
     inherit! :search_paths
