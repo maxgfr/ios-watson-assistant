@@ -13,7 +13,7 @@ Il faut impérativement renommer le fichier CredentialsExample.swift en Credenti
 
 Il faudra également ne pas oublier d'installer les dépendances.
 
-### COCOAPODS
+### Cocoapods
 ```
     pod install
 ```
