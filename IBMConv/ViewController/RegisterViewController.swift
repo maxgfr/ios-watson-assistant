@@ -40,14 +40,14 @@ class RegisterViewController: UIViewController {
         // Check for empty fields
         if((userEmail?.isEmpty)! || (userPassword?.isEmpty)! || (userRepeatPassword?.isEmpty)!){
             // Display alert message
-            displayMyAlertMessage(userMessage: "All fields are required", type:"Alert")
+            displayMyAlertMessage(userMessage: "Tous les champs doivent être complétés.", type:"Attention")
             return
         }
         
         //Check if passwords match
         if(userPassword != userRepeatPassword){
             // Display an alert message
-            displayMyAlertMessage(userMessage: "Passwords do not match", type:"Alert");
+            displayMyAlertMessage(userMessage: "Les mots de passes sont différents...", type:"Attention");
             return;
         }
         
@@ -65,7 +65,7 @@ class RegisterViewController: UIViewController {
         client.add(operation:create)
         
         //Success message
-        let refreshAlert = UIAlertController(title: "Congratulation", message: "Your count was created.", preferredStyle: UIAlertControllerStyle.alert)
+        let refreshAlert = UIAlertController(title: "Félicitation", message: "Votre compte a été crée.", preferredStyle: UIAlertControllerStyle.alert)
         refreshAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
             self.dismiss(animated: true, completion:nil)
         }))

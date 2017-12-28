@@ -34,7 +34,7 @@ class LoginViewController: UIViewController {
         // Check for empty fields
         if((username?.isEmpty)! || (userPassword?.isEmpty)!){
             // Display alert message
-            displayMyAlertMessage(userMessage: "All fields are required", type:"Alert")
+            displayMyAlertMessage(userMessage: "Tous les champs doivent être complétés.", type:"Attention")
             return
         }
         
@@ -73,14 +73,14 @@ class LoginViewController: UIViewController {
         myGroup.notify(queue: .main) {
             print("Finished all requests.")
             if (bool) {
-                let refreshAlert = UIAlertController(title: "Congratulation", message: "Your are  now connected.", preferredStyle: UIAlertControllerStyle.alert)
+                let refreshAlert = UIAlertController(title: "Félicitation", message: "Vous êtes maintenant connecté", preferredStyle: UIAlertControllerStyle.alert)
                 refreshAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
                     self.dismiss(animated: true, completion:nil)
                 }))
                 defaults.set(username!, forKey: "Identifiant")
                 self.present(refreshAlert, animated: true, completion: nil)
             } else {
-                self.displayMyAlertMessage(userMessage: "Your username or password are incorrect.", type:"Alert")
+                self.displayMyAlertMessage(userMessage: "Votre identifiant ou mot de passe est incorrect.", type:"Attention")
             }
         }
        

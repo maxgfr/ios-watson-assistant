@@ -88,7 +88,7 @@ class HomeViewController: JSQMessagesViewController {
     override func didPressSend(_ button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: Date!) {
         
         let message = JSQMessage(senderId: senderId, displayName: senderDisplayName, text: text)
-        messages.append(message!)
+        self.messages.append(message!)
         
         //Synchronisation
         let myGroup = DispatchGroup()
