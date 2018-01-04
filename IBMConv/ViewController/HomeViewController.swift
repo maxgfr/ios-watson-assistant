@@ -9,7 +9,6 @@
 import UIKit
 import JSQMessagesViewController
 import ConversationV1
-import AVFoundation
 import SpeechToTextV1
 
 class HomeViewController: JSQMessagesViewController {
@@ -29,9 +28,6 @@ class HomeViewController: JSQMessagesViewController {
     var context: Context? // save context to continue conversation
     //SpeechToText
     var speechToText: SpeechToText!
-    
-    //Audio
-    var audioPlayer: AVAudioPlayer?
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -96,13 +92,14 @@ class HomeViewController: JSQMessagesViewController {
     
     /// Start transcribing microphone audio
     @objc func startTranscribing() {
-        audioPlayer?.stop()
         var settings = RecognitionSettings(contentType: .opus)
         settings.interimResults = true
         speechToText.recognizeMicrophone(settings: settings) { results in
+            print(results.bestTranscript)
             self.inputToolbar.contentView.textView.text = results.bestTranscript
             self.inputToolbar.toggleSendButtonEnabled()
         }
+        
     }
     
     /// Stop transcribing microphone audio
