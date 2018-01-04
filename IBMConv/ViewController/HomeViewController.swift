@@ -9,6 +9,8 @@
 import UIKit
 import JSQMessagesViewController
 import ConversationV1
+import AVFoundation
+import SpeechToTextV1
 
 class HomeViewController: JSQMessagesViewController {
     
@@ -23,15 +25,26 @@ class HomeViewController: JSQMessagesViewController {
     var messages = [JSQMessage]()
     
     //Conversation
-    let usernameConv = Credentials.ConversationUsername
-    let passwordConv = Credentials.ConversationPassword
-    let versionConv = Credentials.ConversationVersion
-    let workspaceIDConv = Credentials.ConversationWorkspace
     var conversation: Conversation!
     var context: Context? // save context to continue conversation
+    //SpeechToText
+    var speechToText: SpeechToText!
+    
+    //Audio
+    var audioPlayer: AVAudioPlayer?
    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        // microphone button
+        let microphoneButton = UIButton(type: .custom)
+        microphoneButton.setImage(#imageLiteral(resourceName: "microphone-hollow"), for: .normal)
+        microphoneButton.setImage(#imageLiteral(resourceName: "microphone"), for: .highlighted)
+        microphoneButton.addTarget(self, action: #selector(startTranscribing), for: .touchDown)
+        microphoneButton.addTarget(self, action: #selector(stopTranscribing), for: .touchUpInside)
+        microphoneButton.addTarget(self, action: #selector(stopTranscribing), for: .touchUpOutside)
+        inputToolbar.contentView.leftBarButtonItem = microphoneButton
         
         let username = defaults.string(forKey: "Identifiant")
         //If the user is connected
@@ -47,12 +60,14 @@ class HomeViewController: JSQMessagesViewController {
         self.senderId = currentUser.id
         self.senderDisplayName = currentUser.name
         
-        //Initialize a conversation
-        conversation = Conversation(username: usernameConv, password: passwordConv, version: versionConv)
+        
+        //Initialize Watson Services
+        conversation = Conversation(username: Credentials.ConversationUsername, password: Credentials.ConversationPassword, version: Credentials.ConversationVersion)
+        speechToText = SpeechToText(username: Credentials.Speech2TextUsername,password: Credentials.Speech2TextPassword)
         
         //Receive the first message
         let failure = { (error: Error) in print(error) }
-        conversation.message(workspaceID: workspaceIDConv, failure: failure) {
+        conversation.message(workspaceID: Credentials.ConversationWorkspace, failure: failure) {
             response in
             //print(response.output.text)
             for word in response.output.text {
@@ -78,6 +93,23 @@ class HomeViewController: JSQMessagesViewController {
         }
     }
     
+    
+    /// Start transcribing microphone audio
+    @objc func startTranscribing() {
+        audioPlayer?.stop()
+        var settings = RecognitionSettings(contentType: .opus)
+        settings.interimResults = true
+        speechToText.recognizeMicrophone(settings: settings) { results in
+            self.inputToolbar.contentView.textView.text = results.bestTranscript
+            self.inputToolbar.toggleSendButtonEnabled()
+        }
+    }
+    
+    /// Stop transcribing microphone audio
+    @objc func stopTranscribing() {
+        speechToText.stopRecognizeMicrophone()
+    }
+    
     @IBAction func onClickDeco(_ sender: Any) {
         let defaults = UserDefaults.standard
         defaults.removeObject(forKey: "Identifiant")
@@ -98,7 +130,7 @@ class HomeViewController: JSQMessagesViewController {
         let input = InputData(text: text)
         let request = MessageRequest(input: input, context: context)
         let failure = { (error: Error) in print(error) }
-        conversation.message( workspaceID: workspaceIDConv, request: request, failure: failure) {
+        conversation.message( workspaceID: Credentials.ConversationWorkspace, request: request, failure: failure) {
             response in
             print(response.output.text)
             for word in response.output.text {
@@ -127,7 +159,7 @@ class HomeViewController: JSQMessagesViewController {
     
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, avatarImageDataForItemAt indexPath: IndexPath!) -> JSQMessageAvatarImageDataSource! {
         //Disable attachment button
-        self.inputToolbar.contentView.leftBarButtonItem = nil
+        //self.inputToolbar.contentView.leftBarButtonItem = nil
         return nil
     }
     
@@ -146,6 +178,10 @@ class HomeViewController: JSQMessagesViewController {
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return messages.count
+    }
+    
+    override func didPressAccessoryButton(_ sender: UIButton!) {
+        // required by super class
     }
     
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, messageDataForItemAt indexPath: IndexPath!) -> JSQMessageData! {

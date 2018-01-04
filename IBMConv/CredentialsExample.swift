@@ -15,4 +15,8 @@ public struct CredentialsExample {
     public static let ConversationPassword = "xxx"
     public static let ConversationVersion = "xxx"
     public static let ConversationWorkspace = "xxx"
+    public static let Speech2TextUsername = "xxx"
+    public static let Speech2TextPassword = "xxx"
+    public static let Text2SpeechUsername = "xxx"
+    public static let Text2SpeechPassword = "xxx"
 }

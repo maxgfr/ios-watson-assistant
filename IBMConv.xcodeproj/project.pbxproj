@@ -25,6 +25,10 @@
 		A591F48D1FEC039300A3338B /* IBMConvTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A591F48C1FEC039300A3338B /* IBMConvTests.swift */; };
 		A591F4981FEC039300A3338B /* IBMConvUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A591F4971FEC039300A3338B /* IBMConvUITests.swift */; };
 		A5A737E31FF1230D00D584AB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A737E21FF1230D00D584AB /* LoginViewController.swift */; };
+		A5BD2F951FFE6C1900D3E695 /* TextToSpeechV1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5BD2F931FFE6C1900D3E695 /* TextToSpeechV1.framework */; };
+		A5BD2F961FFE6C1900D3E695 /* SpeechToTextV1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5BD2F941FFE6C1900D3E695 /* SpeechToTextV1.framework */; };
+		A5BD2F971FFE6CAF00D3E695 /* SpeechToTextV1.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5BD2F941FFE6C1900D3E695 /* SpeechToTextV1.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A5BD2F981FFE6CAF00D3E695 /* TextToSpeechV1.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5BD2F931FFE6C1900D3E695 /* TextToSpeechV1.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A5EA536F1FF3AD0F00523295 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EA536E1FF3AD0F00523295 /* User.swift */; };
 		A5EA53721FF3CBF000523295 /* ConversationV1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5EA53711FF3CBF000523295 /* ConversationV1.framework */; };
 		A5EA53731FF3CC0100523295 /* ConversationV1.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5EA53711FF3CBF000523295 /* ConversationV1.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -54,6 +58,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				A5BD2F971FFE6CAF00D3E695 /* SpeechToTextV1.framework in CopyFiles */,
+				A5BD2F981FFE6CAF00D3E695 /* TextToSpeechV1.framework in CopyFiles */,
 				A5EA53731FF3CC0100523295 /* ConversationV1.framework in CopyFiles */,
 				A5315A261FEC11F700294C79 /* SwiftyButton.framework in CopyFiles */,
 				A5315A1E1FEC073000294C79 /* Eureka.framework in CopyFiles */,
@@ -89,6 +95,8 @@
 		A591F4971FEC039300A3338B /* IBMConvUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBMConvUITests.swift; sourceTree = "<group>"; };
 		A591F4991FEC039300A3338B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5A737E21FF1230D00D584AB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A5BD2F931FFE6C1900D3E695 /* TextToSpeechV1.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TextToSpeechV1.framework; path = Carthage/Build/iOS/TextToSpeechV1.framework; sourceTree = "<group>"; };
+		A5BD2F941FFE6C1900D3E695 /* SpeechToTextV1.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpeechToTextV1.framework; path = Carthage/Build/iOS/SpeechToTextV1.framework; sourceTree = "<group>"; };
 		A5EA536E1FF3AD0F00523295 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A5EA53711FF3CBF000523295 /* ConversationV1.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ConversationV1.framework; path = Carthage/Build/iOS/ConversationV1.framework; sourceTree = "<group>"; };
 		A8AB87FFC4B4ED0035FA8231 /* Pods-IBMConvTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IBMConvTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IBMConvTests/Pods-IBMConvTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -100,6 +108,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5BD2F951FFE6C1900D3E695 /* TextToSpeechV1.framework in Frameworks */,
+				A5BD2F961FFE6C1900D3E695 /* SpeechToTextV1.framework in Frameworks */,
 				A5EA53721FF3CBF000523295 /* ConversationV1.framework in Frameworks */,
 				A5315A251FEC11EA00294C79 /* SwiftyButton.framework in Frameworks */,
 				A5315A1C1FEC071F00294C79 /* Eureka.framework in Frameworks */,
@@ -129,6 +139,8 @@
 		1D91FA8A5FC7769A60172E16 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A5BD2F941FFE6C1900D3E695 /* SpeechToTextV1.framework */,
+				A5BD2F931FFE6C1900D3E695 /* TextToSpeechV1.framework */,
 				A5EA53711FF3CBF000523295 /* ConversationV1.framework */,
 				A5315A241FEC11E900294C79 /* SwiftyButton.framework */,
 				A5315A1B1FEC071F00294C79 /* Eureka.framework */,
