@@ -15,20 +15,20 @@ import Speech
 class HomeViewController: JSQMessagesViewController, SFSpeechRecognizerDelegate {
     
     //defaults param
-    let defaults = UserDefaults.standard
+    private let defaults = UserDefaults.standard
     
     //Users
-    var currentUser: User!
-    var watsonUser: User!
+    private var currentUser: User!
+    private var watsonUser: User!
     
     // All messages of user1, user2
-    var messages = [JSQMessage]()
+    private var messages = [JSQMessage]()
     
     //Conversation
-    var conversation: Conversation!
-    var context: Context? // save context to continue conversation
+    private var conversation: Conversation!
+    private var context: Context? // save context to continue conversation
     //SpeechToText
-    var speechToText: SpeechToText!
+    private var speechToText: SpeechToText!
     
     //Speech on iOS
     private let speechRecognizer = SFSpeechRecognizer(locale: Locale.init(identifier: "fr-FR"))
@@ -36,13 +36,15 @@ class HomeViewController: JSQMessagesViewController, SFSpeechRecognizerDelegate 
     private var recognitionTask: SFSpeechRecognitionTask?
     private let audioEngine = AVAudioEngine()
     
+    //Button
+    private let microphoneButton = UIButton(type: .custom)
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
         // microphone button
-        let microphoneButton = UIButton(type: .custom)
         microphoneButton.setImage(#imageLiteral(resourceName: "microphone-hollow"), for: .normal)
         microphoneButton.setImage(#imageLiteral(resourceName: "microphone"), for: .highlighted)
         microphoneButton.addTarget(self, action: #selector(startTranscribing), for: .touchDown)
@@ -70,7 +72,7 @@ class HomeViewController: JSQMessagesViewController, SFSpeechRecognizerDelegate 
                 print("Speech recognition not yet authorized")
             }
            OperationQueue.main.addOperation() {
-                microphoneButton.isEnabled = isButtonEnabled
+                self.microphoneButton.isEnabled = isButtonEnabled
             }
         }
         /* Speech on iOS*/
@@ -125,7 +127,6 @@ class HomeViewController: JSQMessagesViewController, SFSpeechRecognizerDelegate 
     
     // Start transcribing microphone audio
     @objc func startTranscribing() {
-        
         /*SpeechToText */
         /*var settings = RecognitionSettings(contentType: .opus)
         settings.interimResults = true
@@ -136,64 +137,12 @@ class HomeViewController: JSQMessagesViewController, SFSpeechRecognizerDelegate 
         }*/
         
         /* Speech on iOS*/
-        if recognitionTask != nil {
-            recognitionTask?.cancel()
-            recognitionTask = nil
-        }
-        
-        let audioSession = AVAudioSession.sharedInstance()
-        do {
-            try audioSession.setCategory(AVAudioSessionCategoryRecord)
-            try audioSession.setMode(AVAudioSessionModeMeasurement)
-            try audioSession.setActive(true, with: .notifyOthersOnDeactivation)
-        } catch {
-            print("audioSession properties weren't set because of an error.")
-        }
-        
-        recognitionRequest = SFSpeechAudioBufferRecognitionRequest()
-        
-        guard let inputNode = audioEngine.inputNode else {
-            fatalError("Audio engine has no input node")
-        }
-        
-        guard let recognitionRequest = recognitionRequest else {
-            fatalError("Unable to create an SFSpeechAudioBufferRecognitionRequest object")
-        }
-        
-        recognitionRequest.shouldReportPartialResults = true
-        
-        recognitionTask = speechRecognizer?.recognitionTask(with: recognitionRequest, resultHandler: { (result, error) in
-            
-            var isFinal = false
-            
-            if result != nil {
-                
-                self.inputToolbar.contentView.textView.text = result?.bestTranscription.formattedString
-                isFinal = (result?.isFinal)!
-            }
-            
-            if error != nil || isFinal {
-                self.audioEngine.stop()
-                inputNode.removeTap(onBus: 0)
-                
-                self.recognitionRequest = nil
-                self.recognitionTask = nil
-                
-                //microphoneButton.isEnabled = true
-            }
-        })
-        
-        let recordingFormat = inputNode.outputFormat(forBus: 0)
-        inputNode.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) { (buffer, when) in
-            self.recognitionRequest?.append(buffer)
-        }
-        
-        audioEngine.prepare()
-        
-        do {
-            try audioEngine.start()
-        } catch {
-            print("audioEngine couldn't start because of an error.")
+        if audioEngine.isRunning {
+            audioEngine.stop()
+            recognitionRequest?.endAudio()
+            microphoneButton.isEnabled = false
+        } else {
+            startRecording()
         }
         /* Speech on iOS*/
     }
@@ -201,7 +150,7 @@ class HomeViewController: JSQMessagesViewController, SFSpeechRecognizerDelegate 
     // Stop transcribing microphone audio
     @objc func stopTranscribing() {
         //speechToText.stopRecognizeMicrophone()
-        self.inputToolbar.toggleSendButtonEnabled()
+        self.inputToolbar.toggleSendButtonEnabled() //Send Button
     }
     
     @IBAction func onClickDeco(_ sender: Any) {
@@ -280,6 +229,76 @@ class HomeViewController: JSQMessagesViewController, SFSpeechRecognizerDelegate 
     
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, messageDataForItemAt indexPath: IndexPath!) -> JSQMessageData! {
         return messages[indexPath.row]
+    }
+    
+    //Speech on iOS
+    func speechRecognizer(_ speechRecognizer: SFSpeechRecognizer, availabilityDidChange available: Bool) {
+        if available {
+            microphoneButton.isEnabled = true
+        } else {
+            microphoneButton.isEnabled = false
+        }
+    }
+    
+    //Speech on iOS
+    func startRecording() {
+        if recognitionTask != nil {
+            recognitionTask?.cancel()
+            recognitionTask = nil
+        }
+        
+        let audioSession = AVAudioSession.sharedInstance()
+        do {
+            try audioSession.setCategory(AVAudioSessionCategoryRecord)
+            try audioSession.setMode(AVAudioSessionModeMeasurement)
+            try audioSession.setActive(true, with: .notifyOthersOnDeactivation)
+        } catch {
+            print("audioSession properties weren't set because of an error.")
+        }
+        
+        recognitionRequest = SFSpeechAudioBufferRecognitionRequest()
+        
+        guard let inputNode = audioEngine.inputNode else {
+            fatalError("Audio engine has no input node")
+        }
+        
+        guard let recognitionRequest = recognitionRequest else {
+            fatalError("Unable to create an SFSpeechAudioBufferRecognitionRequest object")
+        }
+        
+        recognitionRequest.shouldReportPartialResults = true
+        
+        recognitionTask = speechRecognizer?.recognitionTask(with: recognitionRequest, resultHandler: { (result, error) in
+            
+            var isFinal = false
+            
+            if result != nil {
+                self.inputToolbar.contentView.textView.text = result?.bestTranscription.formattedString
+                isFinal = (result?.isFinal)!
+            }
+            
+            if error != nil || isFinal {
+                self.audioEngine.stop()
+                inputNode.removeTap(onBus: 0)
+                self.recognitionRequest = nil
+                self.recognitionTask = nil
+                self.microphoneButton.isEnabled = true
+            }
+        })
+        
+        let recordingFormat = inputNode.outputFormat(forBus: 0)
+        inputNode.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) { (buffer, when) in
+            self.recognitionRequest?.append(buffer)
+        }
+        
+        audioEngine.prepare()
+        
+        do {
+            try audioEngine.start()
+        } catch {
+            print("audioEngine couldn't start because of an error.")
+        }
+        
     }
     
 }
