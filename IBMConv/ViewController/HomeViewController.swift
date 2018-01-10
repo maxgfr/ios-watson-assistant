@@ -150,6 +150,10 @@ class HomeViewController: JSQMessagesViewController, SFSpeechRecognizerDelegate 
     // Stop transcribing microphone audio
     @objc func stopTranscribing() {
         //speechToText.stopRecognizeMicrophone()
+        //Speech with Siri
+        audioEngine.stop()
+        recognitionRequest?.endAudio()
+        microphoneButton.isEnabled = false
         self.inputToolbar.toggleSendButtonEnabled() //Send Button
     }
     
