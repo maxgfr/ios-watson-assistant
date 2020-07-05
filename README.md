@@ -1,4 +1,4 @@
-# IBMConv
+# ios-watson-assistant
 
 Application iOS en natif utilisant les services watson :
 - Cloudant pour l'enregistrement et la connexion
