@@ -1,7 +1,8 @@
 repo_name: maxgfr/ios-watson-assistant
 report_id: adb9ba876794884015af1cad0429e3fd
+version: 0.1
 repo_type: Public
-timestamp: '2023-11-10T09:54:12+00:00'
+timestamp: '2024-01-05T08:56:44+00:00'
 requested_by: maxgfr
 provider: github
 branch: master
@@ -16,7 +17,8 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/1209/javascript.jpeg
-  detection_source: Carthage/Checkouts/swift-sdk/docs/swift-api/services/VisualRecognitionV3/js/jquery.min.js
+  detection_source_url: https://github.com/maxgfr/ios-watson-assistant/blob/master/Carthage/Checkouts/Alamofire/docs/docsets/Alamofire.docset/Contents/Resources/Documents/js/jquery.min.js
+  detection_source: Carthage/Checkouts/Alamofire/docs/docsets/Alamofire.docset/Contents/Resources/Documents/js/jquery.min.js
   last_updated_by: Maxime Golfier
   last_updated_on: 2017-12-21 10:59:22.000000000 Z
 - name: Ruby
@@ -28,6 +30,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/989/ruby.png
+  detection_source_url: https://github.com/maxgfr/ios-watson-assistant
   detection_source: Repo Metadata
 - name: Swift
   description: 'An innovative new programming language for Cocoa and Cocoa Touch. '
@@ -38,6 +41,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/1009/tuHsaI2U.png
+  detection_source_url: https://github.com/maxgfr/ios-watson-assistant
   detection_source: Repo Metadata
 - name: Codecov
   description: Hosted coverage reports with awesome features to enhance your CI workflow
@@ -47,6 +51,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Code Coverage
   image_url: https://img.stackshare.io/service/2673/Codecov_Mark_Circle_Pink.png
+  detection_source_url: https://github.com/maxgfr/ios-watson-assistant/blob/master/Carthage/Checkouts/Chatto/.codecov.yml
   detection_source: Carthage/Checkouts/Chatto/.codecov.yml
   last_updated_by: Maxime Golfier
   last_updated_on: 2017-12-21 10:59:22.000000000 Z
@@ -58,6 +63,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Version Control System
   image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/maxgfr/ios-watson-assistant
   detection_source: Repo Metadata
 - name: RubyGems
   description: Easily download, install, and use ruby software packages on your system
@@ -67,6 +73,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Package Managers
   image_url: https://img.stackshare.io/service/12795/5jL6-BA5_400x400.jpeg
+  detection_source_url: https://github.com/maxgfr/ios-watson-assistant/blob/master/Carthage/Checkouts/Alamofire/Gemfile
   detection_source: Carthage/Checkouts/Alamofire/Gemfile
   last_updated_by: Maxime Golfier
   last_updated_on: 2017-12-21 10:59:22.000000000 Z
@@ -79,7 +86,8 @@ tools:
   category: Build, Test, Deploy
   sub_category: Continuous Integration
   image_url: https://img.stackshare.io/service/460/Lu6cGu0z_400x400.png
-  detection_source: Carthage/Checkouts/swift-sdk/.travis.yml
+  detection_source_url: https://github.com/maxgfr/ios-watson-assistant/blob/master/Carthage/Checkouts/Alamofire/.travis.yml
+  detection_source: Carthage/Checkouts/Alamofire/.travis.yml
   last_updated_by: Maxime Golfier
   last_updated_on: 2017-12-21 10:59:22.000000000 Z
 - name: CocoaPods
@@ -91,8 +99,8 @@ tools:
   category: Libraries
   sub_category: CocoaPods Packages
   image_url: https://img.stackshare.io/service/2426/e1cbdef9d4b11484049a033886578e54_400x400.png
-  detection_source_url: Carthage/Checkouts/Alamofire/Gemfile.lock
-  detection_source: Podfile.lock
+  detection_source_url: https://github.com/maxgfr/ios-watson-assistant/blob/master/Carthage/Checkouts/Alamofire/Gemfile.lock
+  detection_source: Carthage/Checkouts/Alamofire/Gemfile
   last_updated_by: Maxime Golfier
   last_updated_on: 2017-12-21 10:59:22.000000000 Z
 - name: Chatto
@@ -105,8 +113,8 @@ tools:
   category: Libraries
   sub_category: CocoaPods Packages
   image_url: https://img.stackshare.io/package/cocoapods/image.png
-  detection_source_url: Carthage/Checkouts/Chatto/ChattoApp/Podfile.lock
-  detection_source: Carthage/Checkouts/Chatto/ChattoApp/Podfile
+  detection_source_url: https://github.com/maxgfr/ios-watson-assistant/blob/master/Carthage/Checkouts/Chatto/ChattoApp/Podfile.lock
+  detection_source: Carthage/Checkouts/Chatto/ChattoAdditions.podspec
   last_updated_by: Maxime Golfier
   last_updated_on: 2017-12-21 10:59:22.000000000 Z
 - name: ChattoAdditions
@@ -119,7 +127,7 @@ tools:
   category: Libraries
   sub_category: CocoaPods Packages
   image_url: https://img.stackshare.io/package/cocoapods/image.png
-  detection_source_url: Carthage/Checkouts/Chatto/ChattoApp/Podfile.lock
+  detection_source_url: https://github.com/maxgfr/ios-watson-assistant/blob/master/Carthage/Checkouts/Chatto/ChattoApp/Podfile.lock
   detection_source: Carthage/Checkouts/Chatto/ChattoApp/Podfile
   last_updated_by: Maxime Golfier
   last_updated_on: 2017-12-21 10:59:22.000000000 Z
@@ -133,7 +141,7 @@ tools:
   category: Libraries
   sub_category: CocoaPods Packages
   image_url: https://img.stackshare.io/package/cocoapods/image.png
-  detection_source_url: Podfile.lock
+  detection_source_url: https://github.com/maxgfr/ios-watson-assistant/blob/master/Podfile.lock
   detection_source: Podfile
   last_updated_by: Maxime Golfier
   last_updated_on: 2017-12-26 14:52:45.000000000 Z
@@ -147,7 +155,7 @@ tools:
   category: Libraries
   sub_category: CocoaPods Packages
   image_url: https://img.stackshare.io/package/cocoapods/image.png
-  detection_source_url: Podfile.lock
+  detection_source_url: https://github.com/maxgfr/ios-watson-assistant/blob/master/Podfile.lock
   detection_source: Podfile
   last_updated_by: Maxime Golfier
   last_updated_on: 2017-12-27 14:20:50.000000000 Z
@@ -161,7 +169,7 @@ tools:
   category: Libraries
   sub_category: CocoaPods Packages
   image_url: https://img.stackshare.io/package/cocoapods/image.png
-  detection_source_url: Podfile.lock
+  detection_source_url: https://github.com/maxgfr/ios-watson-assistant/blob/master/Podfile.lock
   detection_source: Podfile
   last_updated_by: Maxime Golfier
   last_updated_on: 2017-12-26 14:52:45.000000000 Z
@@ -175,7 +183,7 @@ tools:
   category: Libraries
   sub_category: RubyGems Packages
   image_url: https://img.stackshare.io/package/19189/default_2266a6c0e2693d55b1999a7c5db4be13e5720232.png
-  detection_source_url: Carthage/Checkouts/Alamofire/Gemfile.lock
+  detection_source_url: https://github.com/maxgfr/ios-watson-assistant/blob/master/Carthage/Checkouts/Alamofire/Gemfile.lock
   detection_source: Carthage/Checkouts/Alamofire/Gemfile
   last_updated_by: Maxime Golfier
   last_updated_on: 2017-12-21 10:59:22.000000000 Z
